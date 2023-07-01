@@ -25,7 +25,6 @@ const Categories = () => {
       ))}
     </div>
 
-    
   )
 }
 
