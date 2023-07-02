@@ -3,6 +3,10 @@ import moment from 'moment';
 import Image from 'next/image';
 import Link from 'next/link';
 
+/*
+  @todo: need to check titles with overflow or shrink fonts for mobile. there is a weird overflow with 1036 width on the first card, but otherwise seems okay
+*/
+
 const FeaturedPostCard = ({ post }) => (
   <div className="relative h-72">
     <div className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72" style={{ backgroundImage: `url('${post.featuredImage.url}')` }} />

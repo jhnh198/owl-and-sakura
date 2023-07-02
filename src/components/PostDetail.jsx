@@ -1,5 +1,7 @@
 import React from 'react';
 import moment from 'moment';
+import Author from './Author';
+import Link from 'next/link'
 
 /**
    @todo: enable embeds, add yt embeds or other useful ones later
@@ -61,19 +63,30 @@ const PostDetail = ({ post }) => {
                     alt={post.author.name}
                     height="30px"
                     width="30px"
-                    className="align-middle rouded-full"
+                    className="align-middle rounded-full"
                     src={post.author.photo.url}
                     /> 
                     <p className="inline align-middle ml-2 text-lg">{post.author.name} </p>
                 </div>
 
                 <div className="font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-sakura-original" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     <span>
                     {moment(post.createdAt).format('MMM DD, YYYY')}
                     </span>
+                </div>
+                <div>
+                <Link href="https://www.buymeacoffee.com/jhnh198D" target='_blank'>
+                  <img
+                    alt={post.author.name}
+                    height="30"
+                    width="30"
+                    className="align-middle rounded-full m-1"
+                    src= '/bmc.png'
+                  />
+                </Link>
                 </div>
             </div>
             <h1 className="mb-8 text-3xl fonst-semibold">{post.title}</h1>
@@ -82,6 +95,7 @@ const PostDetail = ({ post }) => {
 
                 return getContentFragment(index, children, typeObj, typeObj.type);
             })}
+            <Author author={post.author}/>
         </div>
     </div>
   )

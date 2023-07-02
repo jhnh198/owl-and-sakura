@@ -11,16 +11,15 @@ const Header = () => {
 
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories));
-    console.log(categories)
     }, [])
 
 
   return (
     <div className="container mx-auto px-10 mb-8">
-      <div className="border-b w-full inline-block border-blue-400 py-8">
+      <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mt-8 w-full inline-block py-8">
         <div className="md:float-left block">
           <Link href="/">
-            <span className="cursor-pointer font-bold text-4xl text-white">
+            <span className="cursor-pointer font-semibold text-4xl text-slate-500 opacity-80">
               Owl And Sakura
             </span>
           </Link>
@@ -29,7 +28,7 @@ const Header = () => {
         <div className="hidden md:float-left md:contents">
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
-              <span className="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer">
+              <span className="md:float-right mt-2 align-middle ml-4 font-semibold cursor-pointer text-slate-400 opacity-80">
                 {category.name}
               </span>
             </Link>

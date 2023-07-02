@@ -12,6 +12,15 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'sakura-original': '#fcc9b9',
+        'sakura-inverted': '#033646',
+        'sakura-saturated': 'ffc5b1',
+        'sakura-darker': 'f88865',
+        'sakura-peachpuff': 'ffdab9',
+        'sakura-silver': 'c0c0c0',
+        'sakure-grayscale': 'dbdbdb',
+      }
     },
   },
   plugins: [],

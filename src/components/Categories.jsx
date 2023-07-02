@@ -8,7 +8,6 @@ const Categories = () => {
 
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories));
-    console.log(categories)
   }, [])
 
   return (
