@@ -7,7 +7,8 @@ import Link from 'next/link'
    @todo: enable embeds, add yt embeds or other useful ones later
    @todo: limit photo sizes so pages have a consistent look
    @todo: add buy me a coffee button with the text buy me a coffee
-   @todo: go over how the raw content is used as there is a new way to work with it
+   @todo: update raw content to work with rich text 
+   @todo: try catch redirects for too many requests
 **/
 const PostDetail = ({ post }) => {
 
