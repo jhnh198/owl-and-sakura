@@ -4,6 +4,7 @@ import { getCategories } from '../services'
 
 /**
    @todo: header can change categories to other pages 
+   @todo: header has no padding for h1 or navs on smaller screens. adjust padding for smaller display
 **/
 
 const Header = () => {

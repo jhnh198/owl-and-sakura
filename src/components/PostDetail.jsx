@@ -5,9 +5,12 @@ import Link from 'next/link'
 
 /**
    @todo: enable embeds, add yt embeds or other useful ones later
-   @todo: make sure photos are same size, limit photo sizes
+   @todo: limit photo sizes so pages have a consistent look
+   @todo: add buy me a coffee button with the text buy me a coffee
+   @todo: go over how the raw content is used as there is a new way to work with it
 **/
 const PostDetail = ({ post }) => {
+
     const getContentFragment = (index, text, obj, type) => {
         let modifiedText = text;
     
@@ -41,6 +44,10 @@ const PostDetail = ({ post }) => {
                 width={obj.width}
                 src={obj.src}
               />
+            );
+          case 'link':
+            return (
+              <Link key={index} href={obj.href} target='_blank'> {modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)} </Link>
             );
           default:
             return modifiedText;
